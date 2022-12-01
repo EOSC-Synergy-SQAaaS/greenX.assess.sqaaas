@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/nomad-coe/greenX git:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-magenta-buffalo.sh
-        container: qc.acc_shabby-sepia-seal
+        - /usr/bin/env sh .sqa/script.crabby-mustard-flamingo.sh
+        container: qc.acc_nippy-red-dachsbracke
   QC.Doc:
     repos:
       github.com/nomad-coe/greenX find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-ruby-fossa.sh
-        container: qc.doc_stinky-chartreuse-eleuth
+        - /usr/bin/env sh .sqa/script.skanky-aquamarine-llama.sh
+        container: qc.doc_frumpy-corn-wolverine
       github.com/nomad-coe/greenX git:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-yellow-neanderthal.sh
-        container: qc.doc_skanky-beige-tapir
+        - /usr/bin/env sh .sqa/script.zippy-celadon-kingfisher.sh
+        container: qc.doc_zippy-malachite-tarantula
       github.com/nomad-coe/greenX markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-ruby-owl.sh
-        container: qc.doc_shaky-myrtle-bracke
+        - /usr/bin/env sh .sqa/script.sickly-champagne-forest.sh
+        container: qc.doc_flaky-platinum-barracuda
   QC.Lic:
     repos:
       github.com/nomad-coe/greenX licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.jumpy-pear-akita.sh
-        container: qc.lic_gloppy-wisteria-abyssinian
+        - /usr/bin/env sh .sqa/script.freaky-pear-centipede.sh
+        container: qc.lic_fuzzy-smalt-otter
   QC.Sec:
     repos:
       github.com/nomad-coe/greenX bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-cerise-grasshopper.sh
-        container: qc.sec_chummy-smalt-dragon
+        - /usr/bin/env sh .sqa/script.chummy-sapphire-magpie.sh
+        container: qc.sec_pretty-periwinkle-antelope
   QC.Sty:
     repos:
       github.com/nomad-coe/greenX flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-burgundy-chihuahua.sh
-        container: qc.sty_hasty-saffron-ocelot
+        - /usr/bin/env sh .sqa/script.scaly-corn-peccary.sh
+        container: qc.sty_freaky-puce-hyrax
   QC.Ver:
     repos:
       github.com/nomad-coe/greenX get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-rust-tzu.sh
-        container: qc.ver_snazzy-jade-dolphin
+        - /usr/bin/env sh .sqa/script.slaphappy-azure-dog.sh
+        container: qc.ver_paltry-copper-uakari
 timeout: 1800
