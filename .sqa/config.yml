@@ -1,0 +1,58 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/nomad-coe/greenX:
+      branch: main
+      repo: https://github.com/nomad-coe/greenX
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/nomad-coe/greenX git:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-magenta-buffalo.sh
+        container: qc.acc_shabby-sepia-seal
+  QC.Doc:
+    repos:
+      github.com/nomad-coe/greenX find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gamy-ruby-fossa.sh
+        container: qc.doc_stinky-chartreuse-eleuth
+      github.com/nomad-coe/greenX git:
+        commands:
+        - /usr/bin/env sh .sqa/script.nerdy-yellow-neanderthal.sh
+        container: qc.doc_skanky-beige-tapir
+      github.com/nomad-coe/greenX markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-ruby-owl.sh
+        container: qc.doc_shaky-myrtle-bracke
+  QC.Lic:
+    repos:
+      github.com/nomad-coe/greenX licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.jumpy-pear-akita.sh
+        container: qc.lic_gloppy-wisteria-abyssinian
+  QC.Sec:
+    repos:
+      github.com/nomad-coe/greenX bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-cerise-grasshopper.sh
+        container: qc.sec_chummy-smalt-dragon
+  QC.Sty:
+    repos:
+      github.com/nomad-coe/greenX flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-burgundy-chihuahua.sh
+        container: qc.sty_hasty-saffron-ocelot
+  QC.Ver:
+    repos:
+      github.com/nomad-coe/greenX get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-rust-tzu.sh
+        container: qc.ver_snazzy-jade-dolphin
+timeout: 1800
